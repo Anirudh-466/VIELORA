@@ -1,0 +1,35 @@
+{
+  "name": "veilora",
+  "version": "1.0.0",
+  "description": "VEILORA - Private, Ephemeral, End-to-End Encrypted Peer-to-Peer Communication Platform",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "node server.js",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm install --prefix client && npm run build --prefix client",
+    "vercel-build": "npm install --prefix client && npm run build --prefix client"
+  },
+  "keywords": [
+    "webrtc",
+    "p2p",
+    "e2ee",
+    "ephemeral",
+    "private-calls",
+    "secure-chat"
+  ],
+  "author": "VEILORA Team",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "socket.io-client": "^4.8.4"
+  }
+}
